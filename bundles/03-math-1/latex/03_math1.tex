@@ -171,34 +171,33 @@ commentstyle=\color{commentcolor}\it\sffamily
 \section{Introduction}
 Next section is about the \texttt{Number Theory}. It will be quite a generous introduction to the questions that are related to Mathematics.  
 
-Mathematics is quite essential to the programmers that want to improve themselves in the topic of competitive programming. We are going to use these topics from graph theory to the subject of strings.  Therefore, a strong understanding of mathematics is fundamental.
+Mathematics is quite essential for  programmers that want to improve themselves in competitive programming. Topics introduced here are going to be used from graph theory to the subject of strings.  Therefore, a strong understanding of mathematics is fundamental.
 
 \section{Number Theory}
-Number theory is a study for the positive natural numbers. Numbers are split into several groups. Number theory is related to the connection between these different groups of numbers  \cite{numbertheory}.
+Number theory is the study of natural numbers. Numbers are split into several groups. Number theory is related to the connection between these different groups of numbers  \cite{numbertheory}.
 \begin{itemize}
-  \item \textbf{Even} \hspace{19mm} 2, 4, 6, 8, 10, 12, ...
-  \item \textbf{Cube} \hspace{19mm} 1, 8, 27, 64, ...
-  \item \textbf{Fibonacci} \hspace{10mm} 1, 1, 2, 3, 5, 8, 13, ...
+  \item \textbf{Even Numbers} \hspace{19mm} 2, 4, 6, 8, 10, 12, ...
+  \item \textbf{Cubic Numbers} \hspace{19mm} 1, 8, 27, 64, ...
+  \item \textbf{Fibonacci Numbers} \hspace{10mm} 1, 1, 2, 3, 5, 8, 13, ...
 \end{itemize}
 
 
-It has a long history of development. The first tablet ever found by scientists was about the Pythagorean triples. The tablet was created in 1800 BC by the Mesopotamian people. Ancient Greek, China, and Islamic states have a critical effect on the growth of number theory \cite{wikipedianumbertheory}.
-
-
 \subsection{Primality Test}
-If a number can only be evenly divided by \texttt{itself} and \texttt{one}, we call this number prime.
+A prime number (or a prime) is a natural number greater than 1 that is not a product of two smaller natural numbers. A natural number greater than 1 that is not prime is called a composite number. For example, 5 is prime because the only ways of writing it as a product, 1 × 5 or 5 × 1, involve 5 itself. However, 4 is composite because it is a product (2 × 2) in which both numbers are smaller than 4. 
+Primes are central in number theory because of the fundamental theorem of arithmetic: every natural number greater than 1 is either a prime itself or can be factorized as a product of primes that is unique up to their order. 
 
-The first ten prime numbers are in the following line. 
+The first ten prime numbers are in the following line:
 
 2, 3, 5, 7, 11, 13, 17, 19, 23, 29, ...
 
-The main question that comes to our minds is how to find out if the given number is prime or not. Let us see a function that returns if the given number is prime or not.  
+The main question that comes to mind is how to check if a given number is prime or not. Let us see a function that returns if the given number is prime or not.  
 
-We are going to test the number of n as \textbf{179424673} for each prime number algorithm.  It is a very large prime number. It allows us to see the run-time differences between the algorithms.
+We are going to test the number of n as  \textbf{1000000007} for each prime number algorithm.  It is a very large prime number. It allows us to see the run-time differences between the algorithms.
 \clearpage
 
-\subsubsection{Naive Approach}
+\subsubsection{Naive Approach: Linear Search}
 \texttt{Time Complexity: O($n$)} \\ \\
+<<<<>>>>
 The first thing that pops in our minds is iterating from \textit{2} to \textit{n-1} and check if the given n is evenly divisible by the current number. This is the naive approach to testing the prime.
 
 For example, let's say we have number \textbf{A}. Our plan in this algorithm is looping from 2 to \textbf{A-1}. For each value in the loop, we will try to divide \textbf{A} by the current value. If the current value divides \textbf{A} evenly, we can say \textbf{A} is not a prime number.  We also know the divisor(factor) of \textbf{A} should be smaller than or equal to \textbf{A}.  Therefore,  we should find at least one divisor of \textbf{A}, if there is one.
